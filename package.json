@@ -1,0 +1,23 @@
+{
+  "name": "height-to-human",
+  "version": "1.0.0",
+  "description": "Front end capstone project for Nashville Software School. Answers the question, \"How many Danny Devitos tall is the Batman Building?\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitney-mitchell/height-to-human.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whitney-mitchell/height-to-human/issues"
+  },
+  "homepage": "https://github.com/whitney-mitchell/height-to-human#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
