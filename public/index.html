@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Height to Human</title>
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<div class="container">
+		<div ng-app="app">
+			<div ng-controller="MainCtrl as main">
+				<h1>{{main.heading}}</h1>
+
+				<form>
+					<select name="person" id="person" ng-model="selectedPerson">
+						<option value="" disabled selected>PERSON</option>
+						<option ng-repeat="(key, person) in main.people" value="{{person}}">{{key}}</option>
+					</select>
+
+					<select name="structure" id="structure" ng-model="selectedStructure">
+						<option value="" disabled selected>STRUCTURE</option>
+						<option ng-repeat="(key, structure) in main.structs" value="{{structure}}">{{key}}</option>
+					</select>
+
+					<input type="submit" value="CONVERT" class="convertbtn"></input>
+				</form>
+
+				<form>
+					<input type="text" placeholder="Name">
+					<input type="text"placeholder="Height">ft</input>
+					<input type="text">in</input>
+					<select name="structure" id="structure" ng-model="selectedStructure">
+						<option value="" disabled selected>STRUCTURE</option>
+						<option ng-repeat="(key, structure) in main.structs" value="{{structure}}">{{key}}</option>
+					</select>
+					<input type="submit" value="CONVERT" class="convertbtn">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="/lib/firebase/firebase.js"></script>
+	<script src="/lib/angular/angular.min.js"></script>
+	<script src="/lib/angular-route/angular-route.min.js"></script>
+	<script src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="/app/main.js"></script>
+	<script src="/app/route.js"></script>
+	<script src="/app/factories.js"></script>
+</body>
+</html>
