@@ -1,0 +1,27 @@
+	<h1><a href ="#/">HEIGHT TO HUMAN</a></h1>
+	<!-- Form for celebrity/structure conversion -->
+		<form ng-submit="main.convertData(selectedPerson, selectedStructure)">
+
+			<select name="person" id="person" ng-model="selectedPerson">
+				<option value="" disabled selected>PERSON</option>
+				<option ng-repeat="(key, person) in main.people" value="{{person}}">{{key}}</option>
+			</select>
+
+			<select name="structure" id="structure" ng-model="selectedStructure">
+				<option value="" disabled selected>STRUCTURE</option>
+				<option ng-repeat="(key, structure) in main.structs" value="{{structure}}">{{key}}</option>
+			</select>
+			<!-- <a href="#/results" class="btn">CONVERT</a> -->
+			<input type="submit" value="CONVERT" class="btn convertbtn" href="#/results"></input>
+		</form>
+		<!-- Form for user/structure conversion -->
+		<form>
+			<input type="text" placeholder="Name">
+			<input type="text" placeholder="Height">ft</input>
+			<input type="text" placeholder="The Rest of That Height">in</input>
+			<select name="structure" id="structure" ng-model="selectedStructure2">
+				<option value="" disabled selected>STRUCTURE</option>
+				<option ng-repeat="(key, structure) in main.structs" value="{{structure}}">{{key}}</option>
+			</select>
+			<input type="submit" value="CONVERT" class="convertbtn"></input>
+		</form>

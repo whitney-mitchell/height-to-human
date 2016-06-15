@@ -10,8 +10,21 @@
 <body>
 	<div class="container">
 		<div ng-app="app">
-			<div ng-controller="MainCtrl as main">
-				<h1>{{main.heading}}</h1>
+			<div ng-view></div>
+		</div>
+	</div>
+
+	<script src="/lib/firebase/firebase.js"></script>
+	<script src="/lib/angular/angular.min.js"></script>
+	<script src="/lib/angular-route/angular-route.min.js"></script>
+	<script src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="/app/main.js"></script>
+	<script src="/app/route.js"></script>
+	<script src="/app/factories.js"></script>
+</body>
+</html>
+			<!-- <div ng-controller="MainCtrl as main">
+				<h1>HEIGHT TO HUMAN</h1>
 
 				<form ng-submit="main.convertData(selectedPerson, selectedStructure)">
 
@@ -38,16 +51,4 @@
 					</select>
 					<input type="submit" value="CONVERT" class="convertbtn"></input>
 				</form>
-			</div>
-		</div>
-	</div>
-
-	<script src="/lib/firebase/firebase.js"></script>
-	<script src="/lib/angular/angular.min.js"></script>
-	<script src="/lib/angular-route/angular-route.min.js"></script>
-	<script src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="/app/main.js"></script>
-	<script src="/app/route.js"></script>
-	<script src="/app/factories.js"></script>
-</body>
-</html>
+			</div> -->
