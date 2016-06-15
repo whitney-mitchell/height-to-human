@@ -8,11 +8,18 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
 			})
 	))
 
-	.controller('MainCtrl', function($http) {
+	.controller('MainCtrl', function($http, $scope) {
 		const main = this;
 		const personUrl = 'https://heighttohuman.firebaseio.com/person';
 		const structureUrl = 'https://heighttohuman.firebaseio.com/structure';
 		main.heading = "HEIGHT TO HUMAN";
+		// main.Math = window.Math;
+		main.convertData = function (selectedPerson, selectedStructure) {
+			console.log("click");
+			main.conversion = Number($scope.selectedStructure) / Number($scope.selectedPerson);
+			console.log(main.conversion);
+		}
+
 		//Get data
 		$http.get(`${personUrl}.json`)
 			.then((response) => {
@@ -25,6 +32,8 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
 				console.log(`${structureUrl}.json`, response.data)
 				main.structs = response.data;
     	})
+
+
   })
 
 	// 	function() {

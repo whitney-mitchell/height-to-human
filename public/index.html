@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible">
 	<title>Height to Human</title>
 	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="styles/style.css">
@@ -13,7 +13,8 @@
 			<div ng-controller="MainCtrl as main">
 				<h1>{{main.heading}}</h1>
 
-				<form>
+				<form ng-submit="main.convertData(selectedPerson, selectedStructure)">
+
 					<select name="person" id="person" ng-model="selectedPerson">
 						<option value="" disabled selected>PERSON</option>
 						<option ng-repeat="(key, person) in main.people" value="{{person}}">{{key}}</option>
@@ -29,13 +30,13 @@
 
 				<form>
 					<input type="text" placeholder="Name">
-					<input type="text"placeholder="Height">ft</input>
-					<input type="text">in</input>
-					<select name="structure" id="structure" ng-model="selectedStructure">
+					<input type="text" placeholder="Height">ft</input>
+					<input type="text" placeholder="The Rest of That Height">in</input>
+					<select name="structure" id="structure" ng-model="selectedStructure2">
 						<option value="" disabled selected>STRUCTURE</option>
 						<option ng-repeat="(key, structure) in main.structs" value="{{structure}}">{{key}}</option>
 					</select>
-					<input type="submit" value="CONVERT" class="convertbtn">
+					<input type="submit" value="CONVERT" class="convertbtn"></input>
 				</form>
 			</div>
 		</div>
