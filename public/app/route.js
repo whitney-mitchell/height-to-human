@@ -20,5 +20,6 @@ angular.module('app')
 				controllerAs: 'main',
 				templateUrl: 'app/partials/resultsUser.html'
 			})
+
 			.otherwise('/')
 	))
