@@ -10,7 +10,7 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
 			})
 	))
 	//MainCtrl
-	.controller('MainCtrl', function($http, $scope, $location, $routeParams) {
+	.controller('MainCtrl', function($http, $scope, $location) {
 		const main = this;
 		main.heading = "heyo"
 		const personUrl = 'https://heighttohuman.firebaseio.com/person';
@@ -27,7 +27,7 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
 				main.structs = response.data;
 			})
 
-		//Convert user selected data, result = the selectd structure measured in
+		//Convert user selected data, result = the selected structure measured in
 		//the selected person's height. Also, on click route to results page,
 		// sending new converted obj through query string.
 		main.convertData = function () {
@@ -35,22 +35,30 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
 			console.log(main.conversion);
 			//query string to send new converted obj between views.
 			$location.path('/results');
-			var q = `converted=${main.conversion}&personHeight=${main.selectedPerson.height}`+
+			var resultsPath = `converted=${main.conversion}&personHeight=${main.selectedPerson.height}`+
 			`&personName=${main.selectedPerson.name}&structureHeight=${main.selectedStructure.height}&structureName=${main.selectedStructure.name}`;
-			$location.search(q);
+			$location.search(resultsPath);
 		}
 		//save new obj for accessibility.
 		let convertObj = $location.search();
-		console.dir(convertObj);
-		main.constObj = convertObj;
+		main.convObj = convertObj;
 
 		main.convertUser = function () {
 			//Convert feet to in
 			main.userHeight = (12 * Number(main.userFt) + Number(main.userIn));
+			//Convert user height to building height
 			main.userConversion = Math.round((main.selectedStructure2.height)/(main.userHeight) * 100) / 100;
-			console.log(main.userHeight, main.userConversion)
+			console.log(main.userHeight, main.userConversion);
+			//query string to send new converted obj between views.
+			$location.path('/resultsUser');
+			var resultsUserPath =`converted=${main.userConversion}&personHeight=${main.userHeight}&personName=${main.userName}` +
+			`&structureHeight=${main.selectedStructure2.height}&structureName=${main.selectedStructure2.name}`;
+			$location.search(resultsUserPath);
 		}
-
+		//save new obj for accessibility.
+		let convertUserObj = $location.search();
+		console.dir(convertUserObj);
+		main.convUserObj = convertUserObj;
 
 
 
