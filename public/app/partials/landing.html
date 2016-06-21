@@ -1,29 +1,27 @@
 	<h1><a href='#/'>HEIGHT TO HUMAN</a></h1>
 	<!-- Form for celebrity/structure conversion -->
 		<div class ='convForm1'>
-			<form ng-submit='main.convertData()'>
+			<form ng-submit='main.gatherData()'>
 				<select name='person' id='person' ng-model='main.selectedPerson' ng-options='person.name for person in main.people'>
 					<option value='' disabled selected>PERSON</option>
 				</select>
 				<select name='structure' id='structure' ng-model='main.selectedStructure' ng-options='structure.name for structure in main.structs'>
 					<option value='' disabled selected>STRUCTURE</option>
-					<!-- <option ng-repeat='structure in main.structs' value='{{structure}}'>{{structure.name}}</option> -->
 				</select>
-				<!-- <a href='#/results' class='btn'>CONVERT</a> -->
-				<input type='submit' value='CONVERT' class='btn convertbtn' href='#/results'></input>
+				<input type='submit' value='CONVERT' class='btn convertbtn'></input>
 			</form>
 		</div>
 
 		<!-- Form for user/structure conversion -->
 		<div class='convForm2'>
-			<form ng-submit='main.convertUser()'>
+			<form ng-submit='main.gatherUserData()'>
 				<input ng-model='main.userName' type='text' placeholder='Name'>
 				<input ng-model='main.userFt' type='text' placeholder='Height'>ft</input>
 				<input ng-model='main.userIn' type='text' placeholder='The Rest of That Height'>in</input>
 				<select name='structure' id='structure' ng-model='main.selectedStructure2' ng-options='structure.name for structure in main.structs'>
 					<option value='' disabled selected>STRUCTURE</option>
 				</select>
-				<input type='submit' value='CONVERT' class='btn	convertbtn' href='#/resultsUser'></input>
+				<input type='submit' value='CONVERT' class='btn	convertbtn'></input>
 			</form>
 		</div>
 
