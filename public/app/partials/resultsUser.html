@@ -3,7 +3,10 @@
 
 		<p class = 'resultsText'>The {{resultsUser.structure}} is {{resultsUser.height}} {{resultsUser.person}}s tall!</p>
 	</div>
-	<div class='modalbtns'>
-		<button type='button' class='btn' data-toggle='modal' data-target='#popularConversions'>Popular Conversions</button>
-		<button type='button' class='btn' data-toggle='modal' data-target='#share'>Share</button>
+	<div class='modalbtns container'>
+
+		<button value= 'recentConversions'class='btn recentbtn' ng-click= 'resultsUser.openRec()'>RECENT CONVERSIONS</button>
+
+		<button value='Share' class='btn sharebtn pageShareBtn' ng-click='resultsUser.share()'>SHARE</button>
 	</div>
+

@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('app')
-	.factory('DataFactory', function($http) {
+	.factory('DataFactory', function($http, $timeout) {
 
 		const personUrl = 'https://heighttohuman.firebaseio.com/person';
 		const structureUrl = 'https://heighttohuman.firebaseio.com/structure';
 		const recentUrl = 'https://heighttohuman.firebaseio.com/recent';
+
 
 		const people = $http.get(`${personUrl}.json`)
 			.then((response) => {
@@ -17,34 +18,25 @@ angular.module('app')
 				return response.data;
 			})
 
+		let recent;
+		firebase.database().ref('recent')
+			.orderByChild('date')
+			.limitToLast(15)
+			.once('value', (snap) => {
+				recent = snap.val();
+			})
+
+
 		return {
 			personList () {
-				return people
+				return $timeout(()=>{}, 500).then(() => people)
 			},
 			structureList () {
-				return structs
+				return $timeout(()=>{}, 500).then(() => structs)
 			},
-			bothList () {
-				return {
-					people,
-					structs
-				}
+			recentList () {
+				return $timeout(()=>{}, 500).then(() => recent)
 			}
-			// 	.then(() => {
-			// 	console.log(666);
-			// 	for (var i = 0; i <= results.people.length; i+=1)
-			// 		if (results.people[i].name === results.person) {
-			// 			results.personObj = results.people[i];
-			// 			console.log("personObj", results.personObj)
-			// 			return results.personObj
-			// 		}
-			// })
-			// },
-			// structRequest () {
-
-			// }
 
 		}
-
-
 	})

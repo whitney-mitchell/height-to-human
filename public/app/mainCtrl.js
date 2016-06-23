@@ -1,9 +1,17 @@
 'use strict';
 
 angular.module('app')
-.controller('MainCtrl', function(DataFactory, $scope, $timeout, $location) {
+.controller('MainCtrl', function(DataFactory, $scope, $timeout, $location, $uibModal) {
 		const main = this;
 
+		// Opens and routes recentCon modal
+		main.openRec = function() {
+			var recentModal = $uibModal.open({
+				controller: 'recModalCtrl',
+				controllerAs: 'recentCon',
+				templateUrl: 'app/partials/modalPopular.html'
+				})
+			}
 		// Get persons data
 		main.getPerson = DataFactory.personList ()
 			.then(function (resolve) {
@@ -27,8 +35,6 @@ angular.module('app')
 
 		//function to send user input to location.path '/resultsUser'
 		main.gatherUserData = function () {
-			main.userFt
-			main.userIn
 			$location.path('/resultsUser').search({
 				heightF: main.userFt,
 				heightI: main.userIn,
@@ -36,4 +42,6 @@ angular.module('app')
 				structure: main.selectedStructure2.name
 			})
 		}
+
+
 	})
