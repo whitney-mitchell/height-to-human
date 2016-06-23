@@ -18,37 +18,14 @@
 	<script src="/lib/angular/angular.min.js"></script>
 	<script src="/lib/angular-route/angular-route.min.js"></script>
 	<script src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="/lib/angular-clipboard/angular-clipboard.js"></script>
 	<script src="/app/main.js"></script>
 	<script src="/app/route.js"></script>
 	<script src="/app/factories.js"></script>
+	<script src="/app/mainCtrl.js"></script>
+	<script src="/app/resultsCtrl.js"></script>
+	<script src="/app/resultsUserCtrl.js"></script>
+	<script src="/app/recentModalCtrl.js"></script>
+
 </body>
 </html>
-			<!-- <div ng-controller="MainCtrl as main">
-				<h1>HEIGHT TO HUMAN</h1>
-
-				<form ng-submit="main.convertData(selectedPerson, selectedStructure)">
-
-					<select name="person" id="person" ng-model="selectedPerson">
-						<option value="" disabled selected>PERSON</option>
-						<option ng-repeat="(key, person) in main.people" value="{{person}}">{{key}}</option>
-					</select>
-
-					<select name="structure" id="structure" ng-model="selectedStructure">
-						<option value="" disabled selected>STRUCTURE</option>
-						<option ng-repeat="(key, structure) in main.structs" value="{{structure}}">{{key}}</option>
-					</select>
-
-					<input type="submit" value="CONVERT" class="convertbtn"></input>
-				</form>
-
-				<form>
-					<input type="text" placeholder="Name">
-					<input type="text" placeholder="Height">ft</input>
-					<input type="text" placeholder="The Rest of That Height">in</input>
-					<select name="structure" id="structure" ng-model="selectedStructure2">
-						<option value="" disabled selected>STRUCTURE</option>
-						<option ng-repeat="(key, structure) in main.structs" value="{{structure}}">{{key}}</option>
-					</select>
-					<input type="submit" value="CONVERT" class="convertbtn"></input>
-				</form>
-			</div> -->

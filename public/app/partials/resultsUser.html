@@ -1,8 +1,12 @@
 <h1><a href ="#/">HEIGHT TO HUMAN</a></h1>
 	<div class = 'resultsDiv'>
-		<p class = 'resultsText'>The {{main.convUserObj.structureName}} is {{main.convUserObj.converted}} {{main.convUserObj.personName}}s tall!</p>
+
+		<p class = 'resultsText'>The {{resultsUser.structure}} is {{resultsUser.height}} {{resultsUser.person}}s tall!</p>
 	</div>
-	<div class='modalbtns'>
-		<button type='button' class='btn' data-toggle='modal' data-target='#popularConversions'>Popular Conversions</button>
-		<button type='button' class='btn' data-toggle='modal' data-target='#share'>Share</button>
+	<div class='modalbtns container'>
+
+		<button value= 'recentConversions'class='btn recentbtn' ng-click= 'resultsUser.openRec()'>RECENT CONVERSIONS</button>
+
+		<button clipboard supported='resultsUser.supported' text='resultsUser.textToCopy' on-copied='resultsUser.success()' on-error='resultsUser.fail(err)' value='Share' class='btn sharebtn pageShareBtn'>SHARE (copy URL)</button>
 	</div>
+
