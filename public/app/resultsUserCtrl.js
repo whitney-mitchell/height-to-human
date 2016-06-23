@@ -64,4 +64,14 @@ angular.module('app')
 				firebase.database().ref('userConversions').push(resultsUser.converted)
 
 			})
+
+			//Below deals with Sharing/copying to clipboard
+				results.supported = false;
+				results.textToCopy = location.href;
+				results.success = function () {
+					console.log('Copied!');
+				};
+				results.fail = function (err) {
+					console.error('Error!', err);
+				};
 	})

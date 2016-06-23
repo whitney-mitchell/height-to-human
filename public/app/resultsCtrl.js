@@ -64,8 +64,26 @@ angular.module('app')
 				//Send to database of recent searches
 				.then((converted)=> {
 					firebase.database().ref('recent').push(results.converted)
-
-
 				})
+
+
+				//Below deals with Sharing/copying to clipboard
+				results.supported = false;
+				results.textToCopy = location.href;
+				results.success = function () {
+					console.log('Copied!');
+				};
+				results.fail = function (err) {
+					console.error('Error!', err);
+				};
+
+
+
+				//results.share = function () {
+					//window.clipboardData.setData("Text", location.href);
+					// alert("Link copied.")
+				//}
+
+				// "http://localhost:8080/#/results?person={{results.name}}&structure={{results.structure}}"
 
 		})
