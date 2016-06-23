@@ -7,6 +7,6 @@
 
 		<button value= 'recentConversions'class='btn recentbtn' ng-click= 'resultsUser.openRec()'>RECENT CONVERSIONS</button>
 
-		<button value='Share' class='btn sharebtn pageShareBtn' ng-click='resultsUser.share()'>SHARE</button>
+		<button clipboard supported='resultsUser.supported' text='resultsUser.textToCopy' on-copied='resultsUser.success()' on-error='resultsUser.fail(err)' value='Share' class='btn sharebtn pageShareBtn'>SHARE (copy URL)</button>
 	</div>
 
