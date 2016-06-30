@@ -1,3 +1,155 @@
-h1 {
-	color: tomato;
+/*Index and Landing styles*/
+
+/*Body, Background Clouds*/
+body {
+	background-color: #B5D5FF;
+	/*background-image: url(/app/images/cloud2.png);
+	background-position: 20px -25px;
+	background-repeat: no-repeat;*/
+	width: 100%;
+	/*animation: animatedClouds 20s linear infinite;*/
 }
+
+.container {
+	background-image: url(/app/images/cloud2.png);
+	background-position: 20px -25px;
+	background-repeat: no-repeat;
+	width: 100%;
+	animation: animatedClouds 20s linear infinite;
+}
+
+@keyframes animatedClouds {
+	0% {background-position: -20px -25px}
+	100% {background-position: 1000px -50px}
+}
+
+/*Main Heading*/
+.heading a {
+	/*width: 100%;*/
+	text-align: center;
+	text-shadow: 3px 1px 3px #6EACDA;
+		2px 1px 3px lightyellow;
+	display: block;
+	font-size: 3.2em;
+	color: #FFC8C8;
+	letter-spacing: 2px;
+	word-spacing: 30px;
+	text-decoration: none;
+}
+
+/*Forms, Select menus, Buttons, Text Inputs, Text*/
+
+.convForm {
+	/*border: 5px solid #9d9d9d;*/
+	border-radius: 10px;
+	width: 80%;
+	margin: 15px auto 25px;
+	display: block;
+	background-color: rgba(215, 250, 225, 0.6);
+	padding: .7em;
+	font-size: 25px;
+	box-shadow: 2px 1px 3px lightyellow,
+	3px 1px 3px #FF8888;
+	text-align: center;
+}
+
+/*text*/
+.instructs {
+	/*color: #FF8888;*/
+	font-family: arial, sans-serif;
+	color: #777;
+	font-weight: 400;
+	line-height: 10px;
+	text-shadow:
+		2px 1px 3px lightyellow;
+		3px 1px 3px #FF8888;
+	margin: 15px 0;
+}
+
+/*selects*/
+.select {
+	background-color: rgba(252,227,227,0.8);
+	font-family: arial, sans-serif;
+	font-size: 18px;
+	color: #777;
+	box-shadow: 2px 1px 3px #888;
+	height: 35px;
+	margin-right: 10px;
+}
+
+/*text inputs*/
+.userInput {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+/*buttons*/
+.btn {
+   border-top: 1px solid #e2d6fc;
+   background: #ffc8c8;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffc8c8), to(#ff8888));
+   background: -webkit-linear-gradient(top, #ffc8c8, #ffc0c0);
+   background: -moz-linear-gradient(top, #ffc8c8, #ffc0c0);
+   background: -ms-linear-gradient(top, #ffc8c8, #ffc0c0);
+   background: -o-linear-gradient(top, #ffc8c8, #ffc0c0);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: 0 1px 0 #888;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #777777;
+   font-size: 18px;
+   font-family: arial, sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   height: 35px;
+   }
+.btn:hover {
+   border-top-color: #ffffe0;
+   background: #a3f0d4;
+   background: -webkit-gradient(linear, left top, left bottom, from(#acf7c0), to(#7ad697));
+   background: -webkit-linear-gradient(top, #a3f0d4, #7ad697);
+   background: -moz-linear-gradient(top, #a3f0d4, #7ad697);
+   background: -ms-linear-gradient(top, #a3f0d4, #7ad697);
+   background: -o-linear-gradient(top, #a3f0d4, #7ad697);
+   color: #ccc;
+   }
+.btn:active {
+   border-top-color: #ffffe0;
+   background: #fafa96;
+   }
+
+.recentbtn {
+	height: 40px;
+	margin: 10px auto;
+	display: block;
+}
+
+
+/*Results Styles*/
+
+/*Structure*/
+.structChosen {
+	display: inline-block;
+	float: right;
+	margin
+}
+
+.structImg {
+	float: right;
+	padding: 0;
+}
+
+/*Person*/
+
+
+
+
+/*Remaining User Results Styles*/
+
+
+
+/*Recent Conv. Modal Styles*/

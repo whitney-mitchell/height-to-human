@@ -1,13 +1,21 @@
-<h1><a href ='#/'>HEIGHT TO HUMAN</a></h1>
-{{results.heading}}
-	<div class = 'resultsDiv'>
-
+<div class= 'row col-xs-12 resultsDiv'>
+	<div class= 'col-xs-6 text'>
 		<p class = 'resultsText'>The {{results.structure}} is {{results.height}} {{results.person}}s tall!</p>
 
 	</div>
+	<div class='col-xs-6 images'>
+		<!-- <div class='structChosen'> -->
+		<img class='structImg' src='{{results.structureObj.structUrl}}' alt="">
+		<!-- </div> -->
+
+	<!-- <div class='personChosen'> -->
+		<img class='personImg' src='{{results.personObj.personUrl}}' alt="">
+	<!-- </div> -->
+	</div>
+</div>
 	<div class='modalbtns container'>
 
 		<button value= 'recentConversions'class='btn recentbtn' ng-click= 'results.openRec()'>RECENT CONVERSIONS</button>
 
-		<button clipboard supported='results.supported' text='results.textToCopy' on-copied='results.success()' on-error='results.fail(err)' value='share' class='btn sharebtn pageShareBtn'>SHARE (copy URL)</button>
+		<button title='{{results.title}}' clipboard supported='results.supported' text='results.textToCopy' on-copied='results.success()' on-error='results.fail(err)' value='share' class='btn sharebtn pageShareBtn'>SHARE (copy URL)</button>
 	</div>
