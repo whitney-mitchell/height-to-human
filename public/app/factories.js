@@ -21,7 +21,7 @@ angular.module('app')
 		let recent;
 		firebase.database().ref('recent')
 			.orderByChild('date')
-			.limitToLast(15)
+			.limitToLast(10)
 			.once('value', (snap) => {
 				recent = snap.val();
 			})

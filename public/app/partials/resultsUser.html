@@ -1,12 +1,34 @@
-<!-- <h1 class='heading'><a href ='#/'>HEIGHT TO HUMAN</a></h1> -->
-	<div class = 'resultsDiv'>
+<div class= 'row col-xs-12 resultsDiv'>
+	<div class= 'col-xs-4 text'>
+		<div class ='textDiv'>
 
-		<p class = 'resultsText'>The {{resultsUser.structure}} is {{resultsUser.height}} {{resultsUser.person}}s tall!</p>
+		<!-- <div class = 'resultsDiv'> -->
+
+			<p class = 'resultsText'>The {{resultsUser.structure}} is {{resultsUser.height}} {{resultsUser.person}}s tall!</p>
+
+		</div>
+		<div class= 'textDiv'>
+			<p class= 'resultsText disclaimer'>*Illustrations, though life-like, are not to scale.</p>
+		</div>
+		<div class= 'textDiv buttons'>
+		</div>
 	</div>
-	<div class='modalbtns container'>
+	<div class='col-xs-4 images'>
+		<!-- <div class='structChosen'> -->
+		<img class='structImg' src='{{resultsUser.structureObj.structUrl}}' alt="">
+		<!-- </div> -->
 
-		<button value= 'recentConversions'class='btn recentbtn' ng-click= 'resultsUser.openRec()'>RECENT CONVERSIONS</button>
 
-		<button clipboard supported='resultsUser.supported' text='resultsUser.textToCopy' on-copied='resultsUser.success()' on-error='resultsUser.fail(err)' value='Share' class='btn sharebtn pageShareBtn'>SHARE (copy URL)</button>
+		<img class='personImg' src='app/images/sitting-cat.png' alt="">
+
 	</div>
 
+	<div class='col-xs-4'>
+		<div class= 'textDiv buttons'>
+			<button value= 'recentConversions'class='btn recentbtn recentbtn2' ng-click= 'resultsUser.openRec()'>RECENT CONVERSIONS</button>
+
+			<button title='{{resultsUser.title}}' clipboard supported='resultsUser.supported' text='resultsUser.textToCopy' on-copied='resultsUser.success()' on-error='resultsUser.fail(err)' value='Share' class='btn sharebtn pageShareBtn'>SHARE</button>
+
+		</div>
+	</div>
+</div>

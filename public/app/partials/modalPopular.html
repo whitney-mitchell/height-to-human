@@ -1,14 +1,14 @@
 <div class='modal-dialog' role='document'>
 	<h1 class='modalH1'>RECENT CONVERSIONS</h1>
 	<div class='container'>
-		<div ng-repeat= 'recent in recentCon.recent'>
-			<p>The {{recent.structure}} is {{recent.conversion}} {{recent.name}}s tall!</p>
-			<p>Share the link: <a href='http://localhost:8080/#/results?person={{recent.name}}&structure={{recent.structure}}' ng-click='recentCon.closeRec()'>{{recent.structure}} in {{recent.name}}s!</a></p>
-		</ul>
+		<div class='modalRepeat' ng-repeat= 'recent in recentCon.recent'>
+			<a class='btn modalRecentbtn' title='Click and see...' href='http://localhost:8080/#/results?person={{recent.name}}&structure={{recent.structure}}' ng-click='recentCon.closeRec()'>The {{recent.structure}} is {{recent.conversion}} {{recent.name}}s tall!</a>
+		</div>
+
+
+		<button value='Close' class='btn closebtn' ng-click='recentCon.closeRec()'>CLOSE</button>
+
 	</div>
-
-
-	<button value='Close' class='btn closebtn' ng-click='recentCon.closeRec()'>CLOSE</button>
 
 </div>
 

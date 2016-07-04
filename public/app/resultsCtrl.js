@@ -79,14 +79,4 @@ angular.module('app')
 					console.error('Error!', err);
 					results.title = 'Try Again!';
 				};
-
-
-
-				//results.share = function () {
-					//window.clipboardData.setData("Text", location.href);
-					// alert("Link copied.")
-				//}
-
-				// "http://localhost:8080/#/results?person={{results.name}}&structure={{results.structure}}"
-
 		})

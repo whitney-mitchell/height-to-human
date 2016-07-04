@@ -66,12 +66,15 @@ angular.module('app')
 			})
 
 			//Below deals with Sharing/copying to clipboard
+				resultsUser.title = 'Copy URL';
 				resultsUser.supported = false;
 				resultsUser.textToCopy = location.href;
 				resultsUser.success = function () {
 					console.log('Copied!');
+					resultsUser.title = 'Copied!';
 				};
 				resultsUser.fail = function (err) {
 					console.error('Error!', err);
+					resultsUser.title = 'Try Again'
 				};
 	})
