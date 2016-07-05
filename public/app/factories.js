@@ -37,6 +37,5 @@ angular.module('app')
 			recentList () {
 				return $timeout(()=>{}, 500).then(() => recent)
 			}
-
 		}
 	})

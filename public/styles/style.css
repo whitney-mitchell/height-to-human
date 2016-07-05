@@ -7,11 +7,11 @@ body {
 }
 
 .container {
+	animation: animatedClouds 25s linear infinite;
 	background-image: url(/app/images/cloud2.png);
 	background-position: 20px -25px;
 	background-repeat: no-repeat;
 	width: 100%;
-	animation: animatedClouds 25s linear infinite;
 }
 
 @keyframes animatedClouds {
@@ -21,8 +21,8 @@ body {
 
 /*Main Heading*/
 .heading {
-	margin-top: 1px;
 	margin-bottom: 1px;
+	margin-top: 1px;
 }
 
 .heading a {
@@ -53,9 +53,8 @@ body {
 	width: 80%;
 }
 
-/*text*/
+/*Text*/
 .instructs {
-	/*color: #FF8888;*/
 	color: #777;
 	font-family: arial, sans-serif;
 	font-weight: 400;
@@ -66,7 +65,7 @@ body {
 		3px 1px 3px #FF8888;
 }
 
-/*selects*/
+/*Selects*/
 .select {
 	background-color: rgba(252,227,227,0.8);
 	box-shadow: 2px 1px 3px #888;
@@ -77,7 +76,7 @@ body {
 	margin-right: 10px;
 }
 
-/*text inputs*/
+/*Text Inputs*/
 .userInput {
 	border-radius: 8px;
 	margin-bottom: 10px;
@@ -85,50 +84,50 @@ body {
 	padding-left: 10px;
 }
 
-/*buttons*/
+/*Buttons*/
 .btn {
-   background: #ffc8c8;
-   background: -webkit-gradient(linear, left top, left bottom, from(#ffc8c8), to(#ffafaf));
-   background: -webkit-linear-gradient(top, #ffc8c8, #ffafaf);
-   background: -moz-linear-gradient(top, #ffc8c8, #ffafaf);
-   background: -ms-linear-gradient(top, #ffc8c8, #ffafaf);
-   background: -o-linear-gradient(top, #ffc8c8, #ffafaf);
-   border-top: 1px solid #e2d6fc;
-   border-radius: 8px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   box-shadow: 0 1px 0 #888;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   color: #777;
-   font-family: arial, sans-serif;
-   font-size: 18px;
-   height: 35px;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   padding: 5px 10px;
-   text-decoration: none;
-   vertical-align: middle;
-   }
+	background: #ffc8c8;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffc8c8), to(#ffafaf));
+	background: -webkit-linear-gradient(top, #ffc8c8, #ffafaf);
+	background: -moz-linear-gradient(top, #ffc8c8, #ffafaf);
+	background: -ms-linear-gradient(top, #ffc8c8, #ffafaf);
+	background: -o-linear-gradient(top, #ffc8c8, #ffafaf);
+	border-top: 1px solid #e2d6fc;
+	border-radius: 8px;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+	box-shadow: 0 1px 0 #777;
+		-webkit-box-shadow: rgba(119, 119, 119,1) 0 1px 0;
+		-moz-box-shadow: rgba(119, 119, 119, 1) 0 1px 0;
+	color: #777;
+	font-family: arial, sans-serif;
+	font-size: 18px;
+	height: 35px;
+	text-decoration: none;
+	text-shadow: rgba(119, 119, 119,.4) 0 1px 0;
+	padding: 5px 10px;
+	vertical-align: middle;
+}
 
 .btn:focus {
 	color: #777;
 }
 
 .btn:hover {
-   background: #a3f0d4;
-   background: -webkit-gradient(linear, left top, left bottom, from(#acf7c0), to(#7ad697));
-   background: -webkit-linear-gradient(top, #a3f0d4, #7ad697);
-   background: -moz-linear-gradient(top, #a3f0d4, #7ad697);
-   background: -ms-linear-gradient(top, #a3f0d4, #7ad697);
-   background: -o-linear-gradient(top, #a3f0d4, #7ad697);
-   border-top-color: #ffffe0;
-   color: #ccc;
-   }
+	background: #a3f0d4;
+	background: -webkit-gradient(linear, left top, left bottom, from(#acf7c0), to(#7ad697));
+	background: -webkit-linear-gradient(top, #a3f0d4, #7ad697);
+	background: -moz-linear-gradient(top, #a3f0d4, #7ad697);
+	background: -ms-linear-gradient(top, #a3f0d4, #7ad697);
+	background: -o-linear-gradient(top, #a3f0d4, #7ad697);
+	border-top-color: #ffffe0;
+	color: #ccc;
+}
 
 .btn:active {
-   background: #fafa96;
-   border-top-color: #ffffe0;
-   }
+	background: #fafa96;
+	border-top-color: #ffffe0;
+}
 
 .recentbtn {
 	display: block;
@@ -137,7 +136,7 @@ body {
 }
 
 
-/*Results Styles*/
+/*Results Styles---*/
 /*Results Text*/
 .textDiv {
 	background-color: rgba(215, 250, 225, 0.6);
@@ -185,7 +184,6 @@ body {
 	animation: bounce 2s infinite;
 	bottom: 30px;
 	position: fixed;
-	/*left: 45%;*/
 }
 
 @keyframes bounce{
@@ -195,25 +193,17 @@ body {
 	100% {bottom:30px;}
 }
 
-
-
 /*Buttons*/
 .buttons {
 	width: 80%;
 	text-align: center;
 	margin: 20px auto;
-
-	/*vertical-align: top;
-	zoom: 1;  Fix for IE7
-	*display: inline; /* Fix for IE7 */
 }
+
 .sharebtn {
 	height: 40px;
 	padding: 5px 10px;
 }
-/*Remaining User Results Styles*/
-
-
 
 /*Recent Conv. Modal Styles*/
 .modal-dialog {
@@ -228,7 +218,7 @@ body {
 	color: #777;
 	font-family: arial, sans-serif;
 	text-shadow:
-		2px 1px 3px lightyellow;
+		2px 1px 3px lightyellow,
 		3px 1px 3px #FF8888;
 }
 

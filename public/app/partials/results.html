@@ -5,21 +5,16 @@
 		</div>
 		<div class= 'textDiv'>
 			<p class= 'resultsText disclaimer'>*Illustrations, though life-like, are not to scale.</p>
-
 		</div>
 	</div>
 	<div class='col-xs-4 images'>
 		<img class='structImg' src='{{results.structureObj.structUrl}}' alt="">
-
 		<img class='personImg' src='{{results.personObj.personUrl}}' alt="">
 	</div>
 	<div class='col-xs-4'>
 		<div class= 'textDiv buttons'>
 			<button value= 'recentConversions' class='btn recentbtn recentbtn2' ng-click= 'results.openRec()'>RECENT CONVERSIONS</button>
-
 			<button title='{{results.title}}' clipboard supported='results.supported' text='results.textToCopy' on-copied='results.success()' on-error='results.fail(err)' value='share' class='btn sharebtn '>SHARE</button>
 		</div>
 	</div>
 </div>
-
-
