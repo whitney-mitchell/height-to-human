@@ -22,7 +22,7 @@ body {
 /*Main Heading*/
 .heading {
 	margin-bottom: 1px;
-	margin-top: 1px;
+	margin-top: 10px;
 }
 
 .heading a {
@@ -47,8 +47,8 @@ body {
 		3px 1px 3px #FF8888;
 	display: block;
 	font-size: 25px;
-	margin: 15px auto 25px;
-	padding: .7em;
+	margin: 25px auto 30px;
+	padding: .9em;
 	text-align: center;
 	width: 80%;
 }
@@ -138,6 +138,10 @@ body {
 
 /*Results Styles---*/
 /*Results Text*/
+.text {
+	padding-top: 20px
+}
+
 .textDiv {
 	background-color: rgba(215, 250, 225, 0.6);
 	border-radius: 10px;
@@ -145,7 +149,7 @@ body {
 		2px 1px 3px lightyellow,
 		3px 1px 3px #FF8888;
 	font-size: 25px;
-	margin: 20px auto 25px;
+	margin: 20px auto 40px;
 	padding: .7em;
 	text-align: center;
 	width: 90%;
