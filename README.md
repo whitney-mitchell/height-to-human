@@ -29,5 +29,8 @@ Now, you can run the app by typing in your Command Line,
 ```
 $ npm start
 ```
+I hope you enjoy Height to Human! Version 2.0 will be even better!
+Have fun!!
+
 
 
