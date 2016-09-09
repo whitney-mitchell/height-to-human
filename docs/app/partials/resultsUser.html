@@ -1,0 +1,22 @@
+<div class= 'row col-xs-12 resultsDiv'>
+	<div class= 'col-xs-4 text'>
+		<div class ='textDiv'>
+			<p class = 'resultsText'>The {{resultsUser.structure}} is {{resultsUser.height}} {{resultsUser.person}}s tall!</p>
+		</div>
+		<div class= 'textDiv'>
+			<p class= 'resultsText disclaimer'>*Illustrations, though quite life-like, are not to scale.</p>
+		</div>
+	</div>
+	<div class='col-xs-4 images'>
+		<img class='structImg' src='{{resultsUser.structureObj.structUrl}}' alt='{{resultsUser.structure}}'>
+		<img class='personImg' src='app/images/sitting-cat.png' alt='{{resultsUser.person}}'>
+	</div>
+
+	<div class='col-xs-4 text'>
+		<div class= 'textDiv buttons'>
+			<button value= 'recentConversions'class='btn recentbtn recentbtn2' ng-click= 'resultsUser.openRec()'>RECENT CONVERSIONS</button>
+
+			<button title='{{resultsUser.title}}' clipboard supported='resultsUser.supported' text='resultsUser.textToCopy' on-copied='resultsUser.success()' on-error='resultsUser.fail(err)' value='Share' class='btn sharebtn pageShareBtn'>SHARE</button>
+		</div>
+	</div>
+</div>
