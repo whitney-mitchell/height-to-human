@@ -9,7 +9,7 @@ angular.module('app')
 			var recentModal = $uibModal.open({
 				controller: 'recModalCtrl',
 				controllerAs: 'recentCon',
-				templateUrl: 'app/partials/modalPopular.html'
+				templateUrl: 'app/partials/modalRecent.html'
 				})
 			}
 

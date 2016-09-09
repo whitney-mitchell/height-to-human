@@ -9,7 +9,7 @@ angular.module('app')
 		var recentModal = $uibModal.open({
 			controller: 'recModalCtrl',
 			controllerAs: 'recentCon',
-			templateUrl: 'app/partials/modalPopular.html'
+			templateUrl: 'app/partials/modalRecent.html'
 			})
 		}
 
@@ -61,11 +61,9 @@ angular.module('app')
 		results.supported = false;
 		results.textToCopy = location.href;
 		results.success = function () {
-			console.log('Copied!');
 			results.title = 'Copied!';
 		};
 		results.fail = function (err) {
-			console.error('Error!', err);
 			results.title = 'Try Again!';
 		};
 	})

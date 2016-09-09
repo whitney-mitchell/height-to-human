@@ -9,7 +9,7 @@ angular.module('app')
 			var recentModal = $uibModal.open({
 				controller: 'recModalCtrl',
 				controllerAs: 'recentCon',
-				templateUrl: 'app/partials/modalPopular.html'
+				templateUrl: 'app/partials/modalRecent.html'
 				})
 			}
 
@@ -38,7 +38,7 @@ angular.module('app')
 					'height' : resultsUser.userHeight,
 					'name' : resultsUser.person
 				}
-				console.log('personObj', resultsUser.personObj);
+
 			})
 
 			// Convert it! And save as a new object for Firebase
@@ -61,11 +61,9 @@ angular.module('app')
 		resultsUser.supported = false;
 		resultsUser.textToCopy = location.href;
 		resultsUser.success = function () {
-			console.log('Copied!');
 			resultsUser.title = 'Copied!';
 		};
 		resultsUser.fail = function (err) {
-			console.error('Error!', err);
-			resultsUser.title = 'Try Again'
+			resultsUser.title = 'Try Again.';
 		};
 	})
