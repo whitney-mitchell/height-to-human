@@ -7,11 +7,17 @@ body {
 }
 
 .container {
-	animation: animatedClouds 25s linear infinite;
+	-webkit-animation: animatedClouds 25s linear infinite;
+	        animation: animatedClouds 25s linear infinite;
 	background-image: url(cloud2.png);
 	background-position: 20px -25px;
 	background-repeat: no-repeat;
 	width: 100%;
+}
+
+@-webkit-keyframes animatedClouds {
+	0% {background-position: -800px -25px}
+	100% {background-position: 1400px -50px}
 }
 
 @keyframes animatedClouds {
@@ -42,7 +48,10 @@ body {
 .convForm {
 	background-color: rgba(215, 250, 225, 0.6);
 	border-radius: 10px;
-	box-shadow:
+	-webkit-box-shadow:
+		2px 1px 3px lightyellow,
+		3px 1px 3px #FF8888;
+	        box-shadow:
 		2px 1px 3px lightyellow,
 		3px 1px 3px #FF8888;
 	display: block;
@@ -68,7 +77,8 @@ body {
 /*Selects*/
 .select {
 	background-color: rgba(252,227,227,0.8);
-	box-shadow: 2px 1px 3px #888;
+	-webkit-box-shadow: 2px 1px 3px #888;
+	        box-shadow: 2px 1px 3px #888;
 	color: #777;
 	font-family: arial, sans-serif;
 	font-size: 18px;
@@ -87,10 +97,6 @@ body {
 /*Buttons*/
 .btn {
 	background: #ffc8c8;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ffc8c8), to(#ffafaf));
-	background: -webkit-linear-gradient(top, #ffc8c8, #ffafaf);
-	background: -moz-linear-gradient(top, #ffc8c8, #ffafaf);
-	background: -ms-linear-gradient(top, #ffc8c8, #ffafaf);
 	background: -o-linear-gradient(top, #ffc8c8, #ffafaf);
 	border-top: 1px solid #e2d6fc;
 	border-radius: 8px;
@@ -115,10 +121,6 @@ body {
 
 .btn:hover {
 	background: #a3f0d4;
-	background: -webkit-gradient(linear, left top, left bottom, from(#acf7c0), to(#7ad697));
-	background: -webkit-linear-gradient(top, #a3f0d4, #7ad697);
-	background: -moz-linear-gradient(top, #a3f0d4, #7ad697);
-	background: -ms-linear-gradient(top, #a3f0d4, #7ad697);
 	background: -o-linear-gradient(top, #a3f0d4, #7ad697);
 	border-top-color: #ffffe0;
 	color: #ccc;
@@ -145,7 +147,10 @@ body {
 .textDiv {
 	background-color: rgba(215, 250, 225, 0.6);
 	border-radius: 10px;
-	box-shadow:
+	-webkit-box-shadow:
+		2px 1px 3px lightyellow,
+		3px 1px 3px #FF8888;
+	        box-shadow:
 		2px 1px 3px lightyellow,
 		3px 1px 3px #FF8888;
 	font-size: 25px;
@@ -185,9 +190,17 @@ body {
 
 /*Person*/
 .personImg {
-	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	        animation: bounce 2s infinite;
 	bottom: 30px;
 	position: fixed;
+}
+
+@-webkit-keyframes bounce{
+	0% {bottom:40px;}
+	30%, 60% {bottom: 75px;}
+	50% {bottom: 45px;}
+	100% {bottom:30px;}
 }
 
 @keyframes bounce{
