@@ -1,6 +1,6 @@
 # Height To Human
 ### v1.0
-
+### [Live Demo!](http://whitney-mitchell.github.io/dynamic-cards-exercise/)
 Built by Whitney Mitchell, July 6, 2016
 
 Front-end capstone project for Nashville Software School. Answers the question, "How many Danny Devitos tall is the Batman Building?"
@@ -15,8 +15,8 @@ Additionally, 'Recent Conversions' are accessible through a modal available in e
 
 ![Example Results view image](https://cloud.githubusercontent.com/assets/18270005/16656983/5bcff9f6-4426-11e6-95fe-3b502619833e.png "Example Results view")
 
-##Installation
-First, fork or clone the project from its github repository.
+## Installation
+First, switch to the [dependencies_version](https://github.com/whitney-mitchell/height-to-human/tree/dependencies_version) branch. Fork or clone the project from its github repository.
 Next, from inside the project folder, install bower components. In your Command Line, type
 ```
 $ bower install
