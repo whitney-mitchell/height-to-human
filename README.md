@@ -1,6 +1,6 @@
 # Height To Human
 ### v1.0
-### [Live Demo!](http://whitney-mitchell.github.io/dynamic-cards-exercise/)
+### [Live Demo!](http://whitney-mitchell.github.io/height-to-human/)
 Built by Whitney Mitchell, July 6, 2016
 
 Front-end capstone project for Nashville Software School. Answers the question, "How many Danny Devitos tall is the Batman Building?"
